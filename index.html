@@ -1,119 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <link rel="stylesheet" href="assets\css\styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>offxcha's page</title>
+    <title>Портфолио | Алексей Алексеев</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/inputs.css">
+    <script src="assets/js/main.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <header class="video-background">
-            <video class="video" playsinline autoplay loop muted>
-                <source src="assets\vid\large.mp4" type="video/mp4">
-                Your browser does not support the video tag
-            </video>
-        </header>
+    <div id="container">
+        <nav>
+            <div class="nav-left">
+                <img class="avatar" src="assets/images/full.jpg" alt="Алексей Алексеев">
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
 
-        <main class="content">
-            <h1 id="about">Обо мне</h1>
-            <p id="classname">Привет! Я начинающий web-разработчик, студент СГУ им. Питирима.</p>
-            
-            <h2>Цели на ближайший год:</h2>
-            <table id="tabshit" border="1">
-                <tr>
-                    <th>Область</th>
-                    <th>Цель</th>
-                </tr>
-                <tr>
-                    <td>Программирование</td>
-                    <td>Освоить базу HTML&CSS, C++. Начать создание pet-проектов</td>
-                </tr>
-                <tr>
-                    <td>Математика</td>
-                    <td>Понять</td>
-                </tr>
-                <tr>
-                    <td>Экономика</td>
-                    <td>Перестать засыпать</td>
-                </tr>
-                <tr>
-                    <td>История</td>
-                    <td>Усовершенствовать запись конспектов</td>
-                </tr>
-            </table>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-background"></div>
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item" data-target="about">Обо мне</button>
+                <button class="mobile-menu-item" data-target="skills">Навыки</button>
+                <button class="mobile-menu-item" data-target="projects">Проекты</button>
+                <button class="mobile-menu-item" data-target="education">Образование</button>
+                <button class="mobile-menu-item" data-target="contact">Контакты</button>
+                <button class="mobile-menu-item the-button green-button" data-target="feedback">Связаться со мной</button>
+            </div>
+        </div>
 
-            <h2>Форма обратной связи</h2>
-            <div class="form-container">
-                <form id="feedbackForm">
-                    <div class="form-group">
-                        <label for="name">Имя:</label>
-                        <input type="text" id="name" name="name" required>
-                        <div class="error" id="nameError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="age">Возраст:</label>
-                        <input type="number" id="age" name="age" min="1" max="120">
-                        <div class="error" id="ageError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Пол:</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="gender" value="male"> Мужской</label>
-                            <label><input type="radio" name="gender" value="female"> Женский</label>
-                            <label><input type="radio" name="gender" value="other"> Другой</label>
-                        </div>
-                        <div class="error" id="genderError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Интересы:</label>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="interests" value="sport"> Спорт</label>
-                            <label><input type="checkbox" name="interests" value="music"> Музыка</label>
-                            <label><input type="checkbox" name="interests" value="movies"> Кино</label>
-                            <label><input type="checkbox" name="interests" value="books"> Книги</label>
-                        </div>
-                        <div class="error" id="interestsError"></div>
-                        
-                        <div id="interestList"></div>
-                        <button type="button" id="addInterest" class="secondary-btn">Добавить интерес</button>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="comments">Комментарии:</label>
-                        <textarea id="comments" name="comments" rows="4" maxlength="200" placeholder="Расскажите о себе..."></textarea>
-                        <div class="char-counter" id="charCounter">Осталось символов: 200</div>
-                        <div class="error" id="commentsError"></div>
-                    </div>
-                    
-                    <div class="form-buttons">
-                        <button type="submit" class="primary-btn">Отправить</button>
-                        <button type="reset" class="secondary-btn">Очистить</button>
-                    </div>
-                </form>
-                
-                <div class="result" id="result"></div>
+        <h1>Алексей Алексеев, 18 лет.<br>Начинающий web-разработчик из Сыктывкара.</h1>
+
+        <main>
+            <div class="section-row">
+                <p id="about" class="section-title">Обо мне</p>
+                <div class="section-content">
+                    <p class="text-regular">Меня зовут Алексей, мне 18 лет, и я начинающий веб-разработчик. Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю Начал изучать веб-разработку год назад и с тех пор постоянно совершенствую свои навыки.</p>
+                    <p class="text-regular">Люблю создавать съешь ещё этих мягких французских булок, да выпей чаю. В свободное время съешь ещё этих мягких французских булок, да выпей чаю. Мечтаю стать профессиональным разработчиком.</p>
+                </div>
             </div>
 
-            <h2>Контакты</h2>
-            <div class="contacts" id="contacts">
-                <p>Email: ratnikoffc@gmail.com</p>
-                <p>Telegram: <a href="https://t.me/offxcha" target="_blank">@offxcha</a></p>
+            <div class="section-row">
+                <p id="skills" class="section-title">Технические навыки</p>
+                <div class="section-content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3 class="skill-title">Frontend</h3>
+                            <p class="text-regular">HTML5, съешь ещё этих мягких французских булок, да выпей чаю, JavaScript. Умею создать съешь ещё этих мягких французских булок, да выпей чаю. Знаком с съешь ещё этих мягких французских булок, да выпей чаю.</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skill-title">Backend & Инструменты</h3>
+                            <p class="text-regular">Git, GitHub. Изучаю основы съешь ещё этих мягких французских булок, да выпей чаю. Умею работать с съешь ещё этих мягких французских булок, да выпей чаю.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <p id="projects" class="section-title">Проекты</p>
+                <div class="section-content">
+                    <p class="text-regular">За последний год создал несколько съешь ещё этих мягких французских булок, да выпей чаю: съешь ещё этих мягких французских булок, да выпей чаю. Каждый проект помог мне улучшить навыки съешь ещё этих мягких французских булок, да выпей чаю.</p>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <p id="education" class="section-title">Образование</p>
+                <div class="section-content">
+                    <div id="education-details">
+                        <div class="education-item">
+                            <p class="education-label">Учебное заведение</p>
+                            <p class="education-value">СГУ им. Питирима Сорокина</p>
+                        </div>
+
+                        <div class="education-item">
+                            <p class="education-label">Специальность</p>
+                            <p class="education-value">Прикладная информатика</p>
+                        </div>
+
+                        <div class="education-item">
+                            <p class="education-label">Год начала</p>
+                            <p class="education-value">2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-row">
+                <p id="feedback" class="section-title">Есть вопросы или предложения? Съешь ещё этих мягких французских булок, да выпей чаю</p>
+                <div class="section-content">
+                    <form class="contact-form">
+                        <div class="form-group float-label">
+                            <label class="float-label-text" for="firstName">Имя</label>
+                            <input class="float-label-input" type="text" id="firstName" placeholder="Введите ваше имя" />
+                            <span id="firstNameError" class="error-text">Ошибка: заполните поле!</span>
+                        </div>
+                        <div class="form-group float-label">
+                            <label class="float-label-text" for="lastName">Фамилия</label>
+                            <input class="float-label-input" type="text" id="lastName" placeholder="Введите вашу фамилию" />
+                            <span id="lastNameError" class="error-text">Ошибка: заполните поле!</span>
+                        </div>
+                        <div class="form-group float-label">
+                            <label class="float-label-text" for="telegram">Телеграм</label>
+                            <input class="float-label-input" type="text" id="telegram" placeholder="@username" />
+                            <span id="telegramError" class="error-text">Ошибка: заполните поле!</span>
+                        </div>
+                        <div class="form-group float-label full-width">
+                            <label class="float-label-text" for="message">Сообщение</label>
+                            <textarea class="float-label-input" id="message" placeholder="Расскажите о вашем проекте или задайте вопрос..."></textarea>
+                            <span id="messageError" class="error-text">Ошибка: заполните поле!</span>
+                        </div>
+                        <button id="submitButton" type="button" class="the-button green-button submit-btn">
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </div>
             </div>
         </main>
 
-        <nav class="navigation">
-            <ul>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#feedbackForm">Форма</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
+        <footer id="contact">
+            <a href="https://t.me/alexey_alexeev">Telegram</a>
+            <a href="https://vk.com/alexey_alexeev">VK</a>
+            <a href="https://github.com/alexey-alexeev">GitHub</a> 
+            <a href="mailto:alexey.alexeev@example.com">Email</a>
+        </footer>
     </div>
-
-    <script src="assets\js\script.js"></script>
 </body>
 </html>

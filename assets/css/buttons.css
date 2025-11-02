@@ -1,0 +1,28 @@
+.the-button {
+    padding: 12px;
+    border-radius: 4px;
+    color: #ffffff;
+    border: none;
+    font-family: "Gerbera";
+    font-weight: bold;
+}
+
+.the-button:hover {
+    cursor: pointer;
+}
+
+.gray-button {
+    background-color: var(--idle-gray);
+}
+
+.gray-button:hover {
+    background-color: var(--hover-gray);
+}
+
+.green-button {
+    background-color: var(--idle-green);
+}
+
+.green-button:hover {
+    background-color: var(--hover-green);
+}

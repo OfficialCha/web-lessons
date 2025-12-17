@@ -171,7 +171,6 @@ body {
 
 .hero__text {
     font-size: 1.25rem;
-    color: lightgray;
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -684,4 +683,5 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
 

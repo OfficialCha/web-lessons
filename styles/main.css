@@ -72,6 +72,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .logo {
@@ -88,9 +89,10 @@ body {
 .nav__list {
     display: flex;
     list-style: none;
-    gap: 2rem;
     margin: 0;
     padding: 0;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .nav__link {
@@ -98,6 +100,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
+    white-space: nowrap;
 }
 
 .nav__link:hover {
@@ -116,6 +119,7 @@ body {
     justify-content: center;
     color: var(--text-primary);
     transition: background-color 0.3s;
+	margin-left: auto;
 }
 
 .theme-toggle:hover {
@@ -238,6 +242,7 @@ body {
     position: relative;
     z-index: 1001;
     padding: 0;
+	margin-left: 15px;
 }
 
 .burger__line,
@@ -265,21 +270,6 @@ body {
 .burger__line::after {
     content: '';
     bottom: -8px;
-}
-
-.burger--active .burger__line {
-    transform: translateY(-50%) rotate(45deg);
-}
-
-.burger--active .burger__line::before {
-    transform: rotate(-45deg);
-    top: 0;
-    opacity: 0;
-}
-
-.burger--active .burger__line::after {
-    transform: rotate(-45deg);
-    bottom: 0;
 }
 
 .mobile-nav {
@@ -516,6 +506,9 @@ body {
 
 .section {
     animation: fadeIn 0.6s ease-out;
+}
+.section__title {
+	margin-top: 16px;
 }
 
 .interactive-card {

@@ -9,6 +9,20 @@
 
     <link rel="stylesheet" href="styles/main.css">
 
+	<link rel="preload" href="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" 
+          as="image" 
+          type="image/jpeg">
+		  
+	<link rel="preload" href="https://funny.klev.club/uploads/posts/2024-03/funny-klev-club-p-smeshnie-kartinki-dzhokonda-16.jpg" 
+          as="image" 
+          type="image/jpeg">
+	
+	<link rel="preload" 
+          href="https://funny.klev.club/uploads/posts/2024-03/funny-klev-club-p-smeshnie-kartinki-dzhokonda-16.jpg" 
+          as="image" 
+          type="image/jpeg"
+          crossorigin="anonymous">
+	
     <meta name="color-scheme" content="light dark">
 </head>
 <body>
@@ -60,9 +74,11 @@
     </div>
     <picture>
         <source srcset="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" type="image/jpeg">
-        <img src="https://abrakadabra.fun/uploads/posts/2021-12/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" 
-             alt="Интерьер музея с картинами" 
-             class="hero__image">
+        <img src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" 
+			alt="Интерьер музея с картинами" 
+			class="hero__image"
+			fetchpriority="high"
+			loading="eager">
     </picture>
 </section>
 
@@ -87,6 +103,7 @@
                         src="https://funny.klev.club/uploads/posts/2024-03/funny-klev-club-p-smeshnie-kartinki-dzhokonda-16.jpg" 
                         class="carousel-image"
                         alt="Леонардо да Винчи «Портрет госпожи Лизы дель Джокондо» (Мона Лиза)"
+						fetchpriority="high"
                         loading="eager"
                     >
                 </div>
@@ -103,7 +120,7 @@
                         src="https://atomnaya-romantika.ru/wp-content/uploads/2024/08/rafael-sikstinskaya-madonna.jpg" 
                         class="carousel-image"
                         alt="Рафаэль «Сикстинская мадонна»"
-                        loading="eager"
+                        loading="lazy"
                     >
                 </div>
                 <div class="carousel-caption">
@@ -119,7 +136,7 @@
                         src="https://atomnaya-romantika.ru/wp-content/uploads/2024/08/ezhen-delakrua-svoboda-vedushhaya-narod.jpg" 
                         class="carousel-image"
                         alt="Эжен Делакруа «Свобода, ведущая народ»"
-                        loading="eager"
+                        loading="lazy"
                     >
                 </div>
                 <div class="carousel-caption">
@@ -135,7 +152,7 @@
                         src="https://ic.pics.livejournal.com/shakko.ru/2710882/4344859/4344859_600.jpg" 
                         class="carousel-image"
                         alt="Леонардо да Винчи «Дама с горностаем»"
-                        loading="eager"
+                        loading="lazy"
                 </div>
                 <div class="carousel-caption">
                     <h3>«Дама с горностаем»</h3>
@@ -306,4 +323,3 @@
     <script src="scripts/main.js"></script>
 </body>
 </html>
-

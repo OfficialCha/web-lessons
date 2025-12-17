@@ -106,9 +106,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     burgerBtn.addEventListener('click', () => {
         const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+        
         burgerBtn.setAttribute('aria-expanded', !isExpanded);
         mobileNav.classList.toggle('mobile-nav--active');
-        burgerBtn.classList.toggle('burger--active');
+        
         document.body.style.overflow = !isExpanded ? 'hidden' : '';
     });
 
@@ -116,7 +117,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         link.addEventListener('click', () => {
             burgerBtn.setAttribute('aria-expanded', 'false');
             mobileNav.classList.remove('mobile-nav--active');
-            burgerBtn.classList.remove('burger--active');
             document.body.style.overflow = '';
         });
     });
@@ -127,7 +127,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             !burgerBtn.contains(e.target)) {
             burgerBtn.setAttribute('aria-expanded', 'false');
             mobileNav.classList.remove('mobile-nav--active');
-            burgerBtn.classList.remove('burger--active');
             document.body.style.overflow = '';
         }
     });

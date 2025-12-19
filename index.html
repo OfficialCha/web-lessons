@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles/main.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 	<link rel="preload" href="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" 
           as="image" 
@@ -23,55 +25,96 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header_inner">
                 <a href="" class="logo"><span>Roflo</span>Музей</a>
                 
+				
+				
+<div class="search-container d-none d-md-flex">
+    <input type="text" 
+        id="search-input" 
+        class="search-input" 
+        placeholder="Поиск по музею..."
+        aria-label="Поиск по содержимому музея">
+    <button id="clear-search" class="search-clear" aria-label="Очистить поиск">×</button>
+</div>
+				
+				
+				
+				
+				
                 <nav class="nav">
-                    <ul class="nav__list">
-                        <li><a href="#paintings" class="nav__link">Картины</a></li>
-                        <li><a href="#sculptures" class="nav__link">Скульптуры</a></li>
-                        <li><a href="#interactive" class="nav__link">Интерактивные выставки</a></li>
-                        <li><a href="#contact" class="nav__link">Обратная связь</a></li>
+                    <ul class="nav_list">
+                        <li><a href="#paintings" class="nav_link">Картины</a></li>
+                        <li><a href="#sculptures" class="nav_link">Скульптуры</a></li>
+                        <li><a href="#interactive" class="nav_link">Интерактивные выставки</a></li>
+                        <li>
+							<a href="#contact" 
+							class="nav_link" 
+							style="
+								display: inline-block;
+								padding: 8px 20px;
+								background-color: #28a745;
+								color: white !important;
+								text-decoration: none;
+								border-radius: 20px;
+								font-weight: 500;
+							">
+        Обратная связь
+    </a>
+</li>
                     </ul>
                 </nav>
 
                 <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
-                    <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
-                    <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                    <span class="theme-toggle_icon theme-toggle_icon-light">☀️</span>
+                    <span class="theme-toggle_icon theme-toggle_icon-dark">🌙</span>
                 </button>
 
                 <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-    <span class="burger__line"></span>
-</button>
+					<span class="burger_line"></span>
+				</button>
+				<button class="contact-widget" id="contact-widget" aria-label="Обратная связь">
+					<i class="fas fa-comment-dots"></i>
+				</button>
             </div>
         </div>
 
         <div class="mobile-nav" id="mobile-nav">
-            <ul class="mobile-nav__list">
-                <li><a href="#paintings" class="mobile-nav__link">Картины</a></li>
-                <li><a href="#sculptures" class="mobile-nav__link">Скульптуры</a></li>	
-                <li><a href="#interactive" class="mobile-nav__link">Интерактивные выставки</a></li>
-                <li><a href="#contact" class="mobile-nav__link">Обратная связь</a></li>
+    <div class="mobile-search-container">
+        <input type="text" 
+            id="search-input-mobile" 
+            class="search-input" 
+            placeholder="Поиск по музею..."
+            aria-label="Поиск по содержимому музея">
+        <button id="clear-search-mobile" class="search-clear" aria-label="Очистить поиск">×</button>
+    </div>
+			
+		
+            <ul class="mobile-nav_list">
+                <li><a href="#paintings" class="mobile-nav_link">Картины</a></li>
+                <li><a href="#sculptures" class="mobile-nav_link">Скульптуры</a></li>	
+                <li><a href="#interactive" class="mobile-nav_link">Интерактивные выставки</a></li>
             </ul>
         </div>
     </header>
 
     <section class="hero">
     <div class="container">
-        <div class="hero__content">
-            <h1 class="hero__title">Виртуальный музей мирового искусства</h1>
-            <p class="hero__text">
+        <div class="hero_content">
+            <h1 class="hero_title">Виртуальный музей мирового искусства</h1>
+            <p class="hero_text">
                 Откройте для себя шедевры живописи, скульптуры и современного искусства 
                 в уникальном цифровом пространстве.
             </p>
-            <a href="#paintings" class="btn btn--primary hero__btn">Исследовать коллекцию</a>
+            <a href="#paintings" class="btn btn-primary hero_btn">Исследовать коллекцию</a>
         </div>
     </div>
     <picture>
         <source srcset="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" type="image/jpeg">
         <img src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639310457_16-abrakadabra-fun-p-fon-muzei-16.jpg" 
 			alt="Интерьер музея с картинами" 
-			class="hero__image"
+			class="hero_image"
 			fetchpriority="high"
 			loading="eager">
     </picture>
@@ -80,8 +123,8 @@
     <main class="main">
         <div class="container">
             <section id="paintings" class="section">
-    <h2 class="section__title">Величайшие картины в истории искусства</h2>
-    <p class="section__desc">Шедевры мировой живописи от эпохи Возрождения до романтизма</p>
+    <h2 class="section_title">Величайшие картины в истории искусства</h2>
+    <p class="section_desc">Шедевры мировой живописи от эпохи Возрождения до романтизма</p>
     
     <div id="artCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -141,7 +184,7 @@
             </div>
             
             <div class="carousel-item">
-                <div class="carousel-image-container"> 							<!-- "atomnaya-romantika.ru/wp-content/uploads/2024/08/leonardo-da-vinchi-dama-s-gornostaem.jpg" -->
+                <div class="carousel-image-container">   <!-- "atomnaya-romantika.ru/wp-content/uploads/2024/08/leonardo-da-vinchi-dama-s-gornostaem.jpg" -->
                     <img 
                         src="https://ic.pics.livejournal.com/shakko.ru/2710882/4344859/4344859_600.jpg" 
                         class="carousel-image"
@@ -168,13 +211,13 @@
 </section>
 
 <section id="sculptures" class="section">
-    <h2 class="section__title">Знаменитые скульптуры</h2>
-    <p class="section__desc">Великие произведения из мрамора и бронзы</p>
+    <h2 class="section_title">Знаменитые скульптуры</h2>
+    <p class="section_desc">Великие произведения из мрамора и бронзы</p>
     
     <div class="row g-4">
         <div class="col-md-6 col-lg-4">
             <div class="card h-100 interactive-card">
-                <div class="card-img-top"> 										<!-- https://www.arts-dnevnik.ru/wp-content/uploads/2024/01/Давид-голова.jpg -->
+                <div class="card-img-top"> 	<!-- https://www.arts-dnevnik.ru/wp-content/uploads/2024/01/Давид-голова.jpg -->
                     <img src="https://www.meme-arsenal.com/memes/a9f98473ff1d23bc5ee79db11062fbb5.jpg" 
                          alt="Давид, Микеланджело" 
                          loading="lazy"
@@ -223,8 +266,8 @@
 </section>
 
 <section id="interactive" class="section">
-    <h2 class="section__title">Интерактивные выставки</h2>
-    <p class="section__desc">Уникальные иммерсивные проекты, где искусство встречается с технологиями</p>
+    <h2 class="section_title">Интерактивные выставки</h2>
+    <p class="section_desc">Уникальные иммерсивные проекты, где искусство встречается с технологиями</p>
     
     <div class="row g-4">
 
@@ -279,35 +322,53 @@
     </div>
 </section>
 
-            <section id="contact" class="section">
-                <h2 class="section__title">Обратная связь</h2>
-                <form class="form" id="contact-form">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Ваше имя</label>
-                        <input type="text" class="form-control" id="name" required>
-                        <div class="form-error" id="error-name"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                        <div class="form-error" id="error-email"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Сообщение</label>
-                        <textarea class="form-control" id="message" rows="4" required></textarea>
-                        <div class="form-error" id="error-message"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Отправить</button>
-                </form>
-            </section>
+    <div id="no-results" class="no-results" style="display: none;">
+        <div class="no-results_content">
+            <div class="no-results_icon">🔍</div>
+            <h3 class="no-results_title">Ничего не найдено</h3>
+            <p class="no-results_text">
+                По запросу "<span class="no-results_query"></span>" ничего не найдено.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+        <div class="contact-modal" id="contact-modal">
+			<div class="contact-modal_content">
+				<button class="contact-modal_close" id="modal-close" aria-label="Закрыть">×</button>
+				<h2 class="contact-modal_title">Обратная связь</h2>
+				<form class="form" id="contact-form">
+					<div class="mb-3">
+						<label for="name" class="form-label">Ваше имя</label>
+						<input type="text" class="form-control" id="name" required>
+						<div class="form-error" id="error-name"></div>
+					</div>
+					<div class="mb-3">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" class="form-control" id="email" required>
+						<div class="form-error" id="error-email"></div>
+					</div>
+					<div class="mb-3">
+						<label for="message" class="form-label">Сообщение</label>
+						<textarea class="form-control" id="message" rows="4" required></textarea>
+						<div class="form-error" id="error-message"></div>
+					</div>
+					<button type="submit" class="btn btn-primary">Отправить</button>
+				</form>
+			</div>
+			<div class="contact-modal_overlay" id="modal-overlay"></div>
+		</div>
         </div>
     </main>
 
 
     <footer class="footer">
         <div class="container">
-            <p class="footer__copy">© 2028 Виртуальный музей искусства</p>
-            <p class="footer__note">zombeziA prime</p>
+            <p class="footer_copy">© 2028 Виртуальный музей искусства</p>
+            <p class="footer_note">zombeziA prime</p>
         </div>
     </footer>
 
